@@ -8,6 +8,7 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+
     size = MediaQuery.of(context).size;
     height = size.height;
     width = size.width;
@@ -17,7 +18,7 @@ class MainPage extends StatelessWidget {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(left: width*0.08,top: height*0.06),
+            padding: EdgeInsets.only(left: width*0.08,top: height*0.06,right: width*0.08),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -27,13 +28,14 @@ class MainPage extends StatelessWidget {
                       children: [
                         Text(
                           'Current location',
-                          style: TextStyle(color: grey),
+                          style: TextStyle(color: grey,fontSize: 20),
+
                         ),
                         SizedBox(height: height*0.005,),
                         Row(
                           children: [
-                            Icon(Icons.location_on,color: yellow,),
-                            Text(location,style: const TextStyle(fontWeight: FontWeight.bold),)
+                            Icon(Icons.location_on,color: yellow,size: 27,),
+                            Text(location,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
                           ],
                         ),
 
@@ -64,7 +66,7 @@ class MainPage extends StatelessWidget {
                             prefixIcon: Icon(Icons.search,color: yellow, size: height*0.025,),
                             hintText: 'Search for event',
                             border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(6),
+                              borderRadius: BorderRadius.circular(9),
 
                             ),
                           ),
@@ -73,6 +75,20 @@ class MainPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: height*0.75,
+                  child: ListView(
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
+                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
+                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
+                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
+                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
+
+                    ],
+                  ),
+                )
               ],
             ),
           ),
