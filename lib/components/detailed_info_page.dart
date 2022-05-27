@@ -47,6 +47,7 @@ class DetailedInfoPage extends StatelessWidget {
     var parsedNum = EveryInfo.path(jonedMember);
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -185,7 +186,7 @@ class DetailedInfoPage extends StatelessWidget {
                       height: height * 0.02,
                     ),
                     const Text(
-                      'Hello everyone We wait you to join with us.',
+                      'Hello everyone We will wait you to join us.',
                       style: TextStyle(
                         fontSize: 15,
                         letterSpacing: 1.7,
