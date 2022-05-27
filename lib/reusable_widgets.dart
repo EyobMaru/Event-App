@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:event/all_imports.dart';
 
 class listOfEvents extends StatelessWidget {
@@ -8,9 +6,14 @@ class listOfEvents extends StatelessWidget {
   String location;
   String discription;
   String word;
+  String imagePath;
+  String profile1;
+  String profile2;
+  String profile3;
+  String jonedMember;
 
   listOfEvents(
-      this.date, this.month, this.location, this.discription, this.word,
+  this.date, this.month, this.location, this.discription, this.word,this.imagePath,this.profile1,this.profile2, this.profile3,this.jonedMember,
       {Key? key})
       : super(key: key);
   var size, height, width;
@@ -20,6 +23,16 @@ class listOfEvents extends StatelessWidget {
     size = MediaQuery.of(context).size;
     height = size.height;
     width = size.width;
+
+
+    Widget profile(String profile){
+      return
+      CircleAvatar(
+        radius: 15,
+        backgroundImage: AssetImage(profile),
+        backgroundColor: Colors.transparent,
+      );
+    }
 
     return Padding(
       padding: EdgeInsets.only(bottom: height * 0.04),
@@ -33,8 +46,8 @@ class listOfEvents extends StatelessWidget {
             // color: Colors.lightBlueAccent,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              image: const DecorationImage(
-                  image: AssetImage('assets/images/event1.jpg'),
+              image: DecorationImage(
+                  image: AssetImage(imagePath),
                   fit: BoxFit.cover),
             ),
             child: Padding(
@@ -87,7 +100,7 @@ class listOfEvents extends StatelessWidget {
                         location,
                         style: const TextStyle(
                             color: Colors.white,
-                            fontSize: 15,
+                            fontSize: 10,
                             letterSpacing: 1.3),
                       ),
                     ],
@@ -101,53 +114,40 @@ class listOfEvents extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(top: height * 0.01),
-            child: Container(
-                child: Row(
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: EdgeInsets.only(left: width * 0.02),
-                  child: const Text(
-                    '46 joined',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: width * 0.03),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage('assets/images/event3.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage('assets/images/event3.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage('assets/images/event3.jpg'),
-                        backgroundColor: Colors.transparent,
-                      ),
-                      Container(
-                        height: height * 0.02,
-                        width: height * 0.02,
-                        child: Center(
-                            child: Text(
-                          '+',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 23,
-                              ),
-                        )),
-                      )
-                    ],
-                  ),
-                ),
+            Padding(
+              padding: EdgeInsets.only(left: width * 0.02),
+              child: Text(
+                jonedMember,
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: width * 0.03),
+              child: Row(
+                children: [
+                  profile(profile1),
+                  profile(profile2),
+                  profile(profile3),
+                  SizedBox(
+                    height: height * 0.02,
+                    width: height * 0.02,
+                    child: const Center(
+                        child: Text(
+                      '+',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                          ),
+                    )),
+                  )
+                ],
+              ),
+            ),
               ],
-            )),
+            ),
           )
         ],
       ),

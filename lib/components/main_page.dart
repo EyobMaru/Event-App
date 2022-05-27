@@ -28,14 +28,14 @@ class MainPage extends StatelessWidget {
                       children: [
                         Text(
                           'Current location',
-                          style: TextStyle(color: grey,fontSize: 20),
+                          style: TextStyle(color: grey,fontSize: 18),
 
                         ),
                         SizedBox(height: height*0.005,),
                         Row(
                           children: [
                             Icon(Icons.location_on,color: yellow,size: 27,),
-                            Text(location,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 20),)
+                            Text(location,style: const TextStyle(fontWeight: FontWeight.bold,fontSize: 15),)
                           ],
                         ),
 
@@ -80,12 +80,15 @@ class MainPage extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.vertical,
                     children: [
-                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
-                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
-                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
-                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
-                      listOfEvents('08', 'june', '6 Kilo', 'Clean city', 'together'),
-
+                     listOfEvents('08', 'March', 'Ayer Tena', 'International Womens day', 'Come and Join us', 'assets/images/event5.webp', 'assets/images/profile3.jpeg', 'assets/images/profile5.jpeg', 'assets/images/profile4.jpeg', '145 Joined'),
+                      listOfEvents('17', 'June', '4 kilo', 'Global Book Publishing', 'Come and Join Us', 'assets/images/book.jpg','assets/images/profile1.jpeg' , 'assets/images/profile2.jpeg', 'assets/images/profile3.jpeg', '27 Joined'),
+                      listOfEvents('29', 'Sep', 'Bole ', 'Day Light Africa Week', 'Come and Join Us', 'assets/images/africa.jpg', 'assets/images/profile2.jpeg', 'assets/images/profile5.jpeg', 'assets/images/profile4.jpeg', '345 Joined'),
+                      listOfEvents('04', 'May', 'Shiromeda', 'Global Youth Day', 'Come and Join Us', 'assets/images/youth.webp', 'assets/images/profile6.jpeg', 'assets/images/profile2.jpeg', 'assets/images/profile5.jpeg', '09 Joined')
+                      
+                      
+                      
+                      
+                      
                     ],
                   ),
                 )
