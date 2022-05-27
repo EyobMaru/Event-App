@@ -1,4 +1,5 @@
 import 'package:event/all_imports.dart';
+import 'package:event/components/main_page.dart';
 
 class Splash extends StatelessWidget {
   Splash({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class Splash extends StatelessWidget {
         width: width * Imagewidth,
         height: height * Imageheight,
         decoration: BoxDecoration(
-            border: Border.all(width: 3,color: Colors.white),
+            border: Border.all(width: 3,color: white),
             borderRadius: BorderRadius.circular(20),
             image: DecorationImage(
                 image: AssetImage(imagePath), fit: BoxFit.cover)),
@@ -118,23 +119,31 @@ class Splash extends StatelessWidget {
                   padding: EdgeInsets.only(right: width * 0.15,top: height*0.12,left: width*0.07),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.black,
+                      primary: black,
                       minimumSize: Size.fromHeight(height*0.08),
                       // NEW
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => MainPage(location: 'Bole,Rwanda'),
+                        ),
+                            (route) => false,
+                      );
+                    },
                     child: const Text(
-                      'Register',
+                      'Find Events',
                       style: TextStyle(fontSize: 24),
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: width*0.19,top: height*0.012),
+                  padding: EdgeInsets.only(left: width*0.14,top: height*0.012),
                   child: Row(
                     children: [
-                      Text('already have an account? ',style: TextStyle(color: grey),),
-                      Text('Sign in',style: TextStyle(color: yellow,fontWeight: FontWeight.bold),)
+                      Text('Do you want premium account? ',style: TextStyle(color: grey),),
+                      Text('Sign Up',style: TextStyle(color: yellow,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )

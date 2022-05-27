@@ -70,17 +70,22 @@ class DetailedInfoPage extends StatelessWidget {
                     SizedBox(
                       height: height * 0.04,
                     ),
-                    const Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
+                    GestureDetector(
+                      onTap: (){
+                          Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_back,
+                        color: white,
+                      ),
                     ),
                     SizedBox(
                       height: height * 0.04,
                     ),
                     Text(
                       EveryInfo.path(date),
-                      style: const TextStyle(
-                          color: Colors.white,
+                      style: TextStyle(
+                          color: white,
                           fontSize: 23,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.5),
@@ -90,8 +95,8 @@ class DetailedInfoPage extends StatelessWidget {
                     ),
                     Text(
                       EveryInfo.path(month),
-                      style: const TextStyle(
-                          color: Colors.white,
+                      style: TextStyle(
+                          color: white,
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.5),
@@ -101,8 +106,8 @@ class DetailedInfoPage extends StatelessWidget {
                     ),
                     Text(
                       EveryInfo.path(location),
-                      style: const TextStyle(
-                          color: Colors.white,
+                      style: TextStyle(
+                          color: white,
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.5),
@@ -112,8 +117,8 @@ class DetailedInfoPage extends StatelessWidget {
                     ),
                     Text(
                       EveryInfo.path(discription),
-                      style: const TextStyle(
-                          color: Colors.white,
+                      style: TextStyle(
+                          color: white,
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 1.5),
@@ -123,8 +128,8 @@ class DetailedInfoPage extends StatelessWidget {
                     ),
                     Text(
                       EveryInfo.path(word),
-                      style: const TextStyle(
-                        color: Colors.white,
+                      style: TextStyle(
+                        color: white,
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 1.5,
@@ -135,13 +140,13 @@ class DetailedInfoPage extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        const Icon(
+                        Icon(
                           Icons.location_on,
-                          color: Colors.white,
+                          color: white,
                         ),
                         Text(
                           EveryInfo.path(location),
-                          style: TextStyle(color: Colors.white, fontSize: 17),
+                          style: TextStyle(color: white, fontSize: 17),
                         ),
                       ],
                     )
@@ -202,7 +207,7 @@ class DetailedInfoPage extends StatelessWidget {
                       height: height * 0.25,
                       width: width * 0.87,
                       decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blueAccent,width: 0.07),
+                          border: Border.all(color: blue,width: 0.07),
                         image: DecorationImage(
                             image: AssetImage(EveryInfo.path(mapImage)), fit: BoxFit.cover),
                       ),
@@ -211,7 +216,7 @@ class DetailedInfoPage extends StatelessWidget {
                       padding: EdgeInsets.only(left: width*0.10,right: width*0.15,top: height*0.03),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black87,
+                          primary: black,
                           minimumSize: Size.fromHeight(height*0.06),
                           // NEW
                         ),

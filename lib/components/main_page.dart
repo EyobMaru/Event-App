@@ -14,7 +14,7 @@ class MainPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: white,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.only(
@@ -54,7 +54,7 @@ class MainPage extends StatelessWidget {
                 Container(
                   width: width * 0.84,
                   height: height * 0.1,
-                  color: const Color(0xfff9f9fa),
+                  color: white_accent,
                   child: SizedBox(
                     // width: width*0.6,
                     child: Padding(
@@ -63,13 +63,13 @@ class MainPage extends StatelessWidget {
                         padding: EdgeInsets.only(
                             left: width * 0.03, right: width * 0.03),
                         child: TextField(
-                          cursorColor: Colors.green,
+
                           decoration: InputDecoration(
                             contentPadding: EdgeInsets.all(height * 0.022),
                             enabledBorder: InputBorder.none,
-                            hoverColor: Colors.white,
+                            hoverColor: white,
                             focusedBorder: InputBorder.none,
-                            fillColor: Colors.white,
+                            fillColor: white,
                             filled: true,
                             prefixIcon: Icon(
                               Icons.search,

@@ -6,11 +6,11 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/main',
+      initialRoute: '/',
       routes: {
         '/': (context) => Splash(),
         '/main': (context) => MainPage(location: 'Bole, Rwanda'),
-        // '/detail': (context) => DetailedInfoPage(),
+
       },
     ),
   );

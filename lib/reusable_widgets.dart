@@ -61,45 +61,45 @@ class listOfEvents extends StatelessWidget {
                   ),
                   Text(
                     date,
-                    style: const TextStyle(
-                        color: Colors.white, fontSize: 18, letterSpacing: 1.3),
+                    style: TextStyle(
+                        color: white, fontSize: 18, letterSpacing: 1.3),
                   ),
                   Text(
                     month,
-                    style: const TextStyle(
-                        color: Colors.white, fontSize: 15, letterSpacing: 1.3),
+                    style: TextStyle(
+                        color: white, fontSize: 15, letterSpacing: 1.3),
                   ),
                   SizedBox(
                     height: height * 0.02,
                   ),
                   Text(
                     location,
-                    style: const TextStyle(
-                        color: Colors.white, fontSize: 15, letterSpacing: 1.3),
+                    style: TextStyle(
+                        color: white, fontSize: 15, letterSpacing: 1.3),
                   ),
                   Text(
                     discription,
-                    style: const TextStyle(
-                        color: Colors.white, fontSize: 15, letterSpacing: 1.3),
+                    style: TextStyle(
+                        color: white, fontSize: 15, letterSpacing: 1.3),
                   ),
                   Text(
                     word,
-                    style: const TextStyle(
-                        color: Colors.white, fontSize: 15, letterSpacing: 1.3),
+                    style: TextStyle(
+                        color: white, fontSize: 15, letterSpacing: 1.3),
                   ),
                   SizedBox(
                     height: height * 0.03,
                   ),
                   Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.location_on,
-                        color: Colors.white,
+                        color: white,
                       ),
                       Text(
                         location,
-                        style: const TextStyle(
-                            color: Colors.white,
+                        style: TextStyle(
+                            color: white,
                             fontSize: 10,
                             letterSpacing: 1.3),
                       ),
